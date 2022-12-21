@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Funda Of Web IT</title>
+    <title>Blocked Tin Numbers</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
             <div class="col-md-12">
                 <div class="card mt-4">
                     <div class="card-header">
-                        <h4>How to make Search box & filter data in HTML Table from Database in PHP MySQL </h4>
+                        <h4>If your Tin you search appears please set pl account on stop and report to your line manager  </h4>
                     </div>
                     <div class="card-body">
                         <div class="row">

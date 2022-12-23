@@ -15,7 +15,7 @@
             <div class="col-md-12">
                 <div class="card mt-4">
                     <div class="card-header">
-                        <h4>If your Tin you search appears please set pl account on stop and report to your line manager  </h4>
+                        <h4>Please set your Pl account to stop and notify your line manager if a Tin you search emerges. </h4>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -41,19 +41,20 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
+                                    <th>TIN Number</th>
+                                    <th>Name</th>
+                                    <th>Listreported</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
-                                    $con = mysqli_connect("localhost","root","toor","phptutorials");
+                                    $con = mysqli_connect("sql7.freesqldatabase.com","sql7586127","kGiUMmAjjq","sql7586127");
+                                    mysqli_set_charset($con,"utf8");
 
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $query = "SELECT * FROM users WHERE CONCAT(firstname,lastname,email) LIKE '%$filtervalues%' ";
+                                        $query = "SELECT * FROM btin WHERE TIN LIKE '%$filtervalues%' ";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
@@ -63,9 +64,9 @@
                                                 ?>
                                                 <tr>
                                                     <td><?= $items['id']; ?></td>
-                                                    <td><?= $items['firstname']; ?></td>
-                                                    <td><?= $items['lastname']; ?></td>
-                                                    <td><?= $items['email']; ?></td>
+                                                    <td><?= $items['TIN']; ?></td>
+                                                    <td><?= $items['Name']; ?></td>
+                                                    <td><?= $items['Listreported']; ?></td> 
                                                 </tr>
                                                 <?php
                                             }
